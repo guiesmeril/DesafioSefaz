@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<h:outputStylesheet name="css/style.css" />
+	<title>Cadastro de Usuários</title>
+</h:head>
+<h:body>
+<b:container>
+	<h:form>
+		<div class="container">
+			<div class="box">
+			<b:messages/>
+				<h1 align="center">Desafio Desenvolvedor</h1>
+				<br> </br>
+				<b:inputText id="email" placeholder="Email" value="#{controlAcessBeans.usuario.email}"/>
+				<b:inputText id="senha" placeholder="Senha" type="password" value="#{controlAcessBeans.usuario.senha}"/>
+				<b:commandButton action="#{controlAcessBeans.logar}" look="primary btn-block" value="Entrar" />
+				 <h:message for="msgValidador"></h:message>
+			</div>
+		</div>
+	</h:form>
+</b:container>
+<b:container>
+	<h:form>
+		<div align="center" class="content">
+			<b:commandLink value="Cadastre-se" action="cadastroInicial.xhtml?faces-redirect=true"/>
+		</div>
+	</h:form>
+</b:container>
+</h:body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<h:outputStylesheet name="css/style.css" />
+	<title>Cadastro de Usuários</title>
+</h:head>
+<h:body>
+<b:container>
+	<h:form>
+		<div class="container">
+			<div class="box">
+			<b:messages/>
+				<h2 align="center">Desafio Desenvolvedor</h2>
+				
+				<b:inputText id="nome" placeholder="Digite seu Nome Completo." value="#{manterUsersBeans.usuario.nome}"/>
+				<b:inputText id="email" placeholder="Digite seu E-mail." value="#{manterUsersBeans.usuario.email}"/>
+				<b:inputText id="senha" placeholder="Digite sua Senha." type="password" value="#{manterUsersBeans.usuario.senha}"/>
+				<b:inputText id="telefone" placeholder="Telefone" value="#{manterUsersBeans.usuario.telefone}"/>
+				<b:inputText id="tipoTelefone" placeholder="Tipo Telefone (Fixo ou Celular)." value="#{manterUsersBeans.usuario.tipoTelefone}"/>
+				<b:commandButton action="#{manterUsersBeans.cadastrarInicial}" look="primary btn-block" value="Cadastrar" />
+			</div>
+		</div>    
+	</h:form>
+</b:container>  
+<b:container>
+	<h:form>
+		<div align="center" class="contente" >
+				<b:commandLink value="Faça login." action="login.xhtml?faces-redirect=true"/>
+		</div>
+	</h:form>
+</b:container>
+</h:body>
+</html>

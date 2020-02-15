@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<h:outputStylesheet name="css/style.css" />
+	<title>Cadastro de Usuários</title>
+</h:head>
+<h:body>
+	<b:container>
+		<h:form>
+			<div class="container">
+				<div class="box">
+				<b:messages/>
+				<h4>
+				Nome:
+				<b:inputText id="nome" value="#{manterUsersBeans.usuario.nome}"/>
+				Email:
+				<b:inputText id="email"  value="#{manterUsersBeans.usuario.email}"/>
+				Telefone:
+				<b:inputText id="telefone" value="#{manterUsersBeans.usuario.telefone}"/>
+				Tipo: Fixo ou Cel
+				<b:inputText id="tipo"   value="#{manterUsersBeans.usuario.tipoTelefone}"/>
+				Senha:
+				<b:inputText id="senha"   type="password" value="#{manterUsersBeans.usuario.senha}"/>
+				</h4>
+				<b:commandButton action="#{manterUsersBeans.cadastrarUsuario}" look="primary btn-block" value="Cadastrar" />
+				
+				</div>
+			</div>
+		</h:form>
+	</b:container>
+</h:body>
+</html>
