@@ -1,2 +1,2 @@
 # DesafioSefaz
-Projeto para seleção para Desenvolvedor, o Projeto é um Cadastro de Usuários.
+Projeto para seleção de DesenvolvedorJr, o Projeto é um Cadastro de Usuários.
